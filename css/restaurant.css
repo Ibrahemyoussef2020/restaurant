@@ -304,7 +304,7 @@ nav li .nav-link{
     margin: 5px 0;
     border: 1.5px solid #ccc;
     border-radius: 7px;
-    min-width: 140px;
+    min-width: 180px;
 }
 .btn-dw-container  .btn-phon > * {
     display: block;
