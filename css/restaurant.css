@@ -1,22 +1,4 @@
-/*
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) { ... }
-*/
 /*********************************************/
 /*                 gineral css               */
 /*********************************************/
@@ -196,7 +178,6 @@ nav li .nav-link{
 .container-fluid.food-dish > .row > div > img{
     transition: trnsform 1s linear;
     animation:  1.9s linear 0s infinite alternate dish;
-
 }
 .food-dish{
     margin-top: 100px !important;
@@ -270,7 +251,6 @@ nav li .nav-link{
     text-align: center;
     display: block;
 }
-
 .menus .row img {
     max-width: 125px;
     max-height: 125px;
@@ -310,6 +290,7 @@ nav li .nav-link{
 .btn-dw-container {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn-dw-container  .btn-phon{
@@ -320,8 +301,10 @@ nav li .nav-link{
     border: none;
     outline: none;
     padding: 1px 7px;
+    margin: 5px 0;
     border: 1.5px solid #ccc;
     border-radius: 7px;
+    min-width: 140px;
 }
 .btn-dw-container  .btn-phon > * {
     display: block;
@@ -421,7 +404,6 @@ footer .row1 div:first-child ul li{
     color: #000;
     font-size: 1.5rem;
 }
-
 /**********************************************/
 /*               scroll                       */
 /**********************************************/ 
@@ -505,8 +487,7 @@ footer .row1 div:first-child ul li{
         transform: scale3d(1,1,1);
         
     }
-
-    
+ 
 }
 /*************************************************/
 @media only screen and (max-width: 768px) { 
@@ -564,6 +545,10 @@ footer .row1 div:first-child ul li{
 /******************************************/
 @media only screen and (max-width: 572px) { 
 
+    .dish-about > .row > div button{
+        font-size: calc(var(--main-font) - 3px);
+    }
+
     .phoes .row .phone-col img {
         width: 100%;
         max-width: 200px; 
@@ -579,6 +564,7 @@ footer .row1 div:first-child ul li{
         padding-bottom: 10px;
         border-bottom: 1px solid #ccc;
     }
+
 } 
 /***************************************************/
 /**                      animation                **/
