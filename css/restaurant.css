@@ -78,7 +78,7 @@ h2,h5 ,.bold{
     font-weight: 600;
 }
 h4{
-    line-height: 1.5rem;
+    line-height: 1.9rem;
     color: #777;
 }
 h6{
@@ -286,13 +286,15 @@ nav li .nav-link{
     max-width: 100%;
     max-width: 100%;
 }
-
 .san1 article , .san2 article{
     padding: 50px;
 }
+.sandwich-slider .col-sm-4{
+    text-align: center;
+}
 .sandwich-slider img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     padding: 50px 10px;
     border-radius: 50%;
     border-top-left-radius: 50px;
