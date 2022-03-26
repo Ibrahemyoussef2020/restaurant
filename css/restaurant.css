@@ -1,6 +1,6 @@
 
 /*********************************************/
-/*                 gineral css               */
+/*                 gineral root              */
 /*********************************************/
 :root{
     /* colors */
@@ -22,14 +22,16 @@
     padding: 0;
     margin: 0;
 }
-
 body{
     background: var(--body-color);
 }
+/******************/
+/*   classes      */
+/******************/
 .under-body{
     overflow-x: hidden;
 }
-.under-body > section:not(.food-dish ){
+.under-body > section{
     margin: 70px auto;
 }
 .under-body > section.Offering{
@@ -49,6 +51,18 @@ body{
 .center{
     text-align: center;
 }
+.fit-content{
+ height: fit-content !important; 
+}
+.About .row{
+    direction:rtl !important;
+}
+.smaller-logo{
+    font-size: var(--smaller-logo-font);
+}
+/******************/
+/*    tags        */
+/******************/
 svg , i , li {
     cursor: pointer;
 }
@@ -74,23 +88,15 @@ ul{
     margin: 0;
     padding: 0;
 }
-
 /*********************************************/
 /*                 nav bar                   */
 /*********************************************/
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+nav{
+    position: fixed !important;
     width: 100%;
-    z-index: 20; 
-    background: transparent;  
-    padding-top: 0; 
-    padding-bottom: 0;
+    z-index: 11;
 }
 nav .container-fluid {
-    display: flex;
-    align-items: center;
     font-size: var(--main-font) ;
     padding: 10px;
 }
@@ -102,18 +108,14 @@ nav .nav-logo-container  {
     font-family: "Poppins";
     font-style: italic;
 }
-
 nav  .collapse{
     padding-bottom: 0;
 }
 nav ul li a {
-    color: var(--opacit-color);
+    color: #777;
 }
-nav ul li .nav-link.active{
-    color: var(--main-color) ;
-}
-nav ul li .nav-link:hover {
-    color: var(--main-color) ;
+nav ul li a:hover {
+    color: var(--main-color) !important ;
 }
 nav .navbar-toggler {
     border: none ;
@@ -128,7 +130,6 @@ nav li .nav-link{
 /***************************************************/
 /**     container-fluid (food dish , about Us )    */
 /***************************************************/
-
 .dish-about > .row{
     display: flex;
 }
@@ -139,11 +140,11 @@ nav li .nav-link{
     justify-content: center;
 }
 .dish-about > .row > div button{
-        max-width: 150px;
-        margin-bottom: 10px;
-        position: relative;
-        overflow: hidden;
-        font-size: var(--main-font);
+    max-width: 150px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    font-size: var(--main-font);
 }
 .btn-success {
     position: relative;
@@ -169,7 +170,6 @@ nav li .nav-link{
     opacity: 1;
     transform: scale3d(1,1,1);
 }
-
 .dish-about > .row > div > img {
     width: 100%;
     height: 100%;
@@ -192,9 +192,8 @@ nav li .nav-link{
     direction: ltr;
 }
 .About h3{
-    font-size: calc(1.3rem + 1vw)
+    line-height: 2.2rem ;
 }
-
 .About .row div figure{
     width: 100%;
     overflow: hidden;
@@ -211,6 +210,7 @@ nav li .nav-link{
 .About .row div img:hover{
     transform: scale3d(1.2,1.2,1.2)translatez(0)rotatez(10deg);
 }
+
 /***************************************************/
 /**                icons-container                **/
 /***************************************************/
@@ -227,7 +227,6 @@ nav li .nav-link{
     background: transparent;
     color:#3d9b6d ;
 }
-
 .icons-container .icon svg:hover{
     transform: rotatey(180deg);
     color: var(--main-color);
@@ -259,7 +258,6 @@ nav li .nav-link{
     border: 10px solid #f7f5f5;
     border-radius: 50%;
 }
-
 .menus .row > div > .relative{
     position: absolute;
     bottom: 0;
@@ -274,6 +272,79 @@ nav li .nav-link{
 .menus .row > div > .relative:hover{
     background: var(--main-color);
 }
+/******************************************************/
+/*                      sandwich                      */  
+/******************************************************/
+.san-logo .row {
+    justify-content: center;
+    background: #fff;
+}
+.sandwich .row div div {
+    text-align: center;
+}
+.sandwich img{
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.san1 article , .san2 article{
+    padding: 50px;
+}
+.sandwich-slider img {
+    width: 100%;
+    height: 100%;
+    padding: 50px 10px;
+    border-radius: 50%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.sandwich-slider .row > div{
+    height: 70%;
+}
+.sandwich-slider .row footer{
+    height: 30%;
+    background: #fff;
+    padding: 5px;
+}
+.sandwich-slider .row footer *{
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+}
+.sandwich-slider .row footer svg {
+    color: var(--main-color);
+}
+/************************************************/
+/**                   leave tree               */
+/***********************************************/
+.leave.Offering{
+    width: 90%;
+    background: #3d9b6d59;
+    padding: 60px 10px;
+    margin: 20px auto -20px !important ;
+    border-radius: 50px;
+}
+
+/************************************************/
+/**                      articles               */
+/***********************************************/
+.articles{
+    padding: 20px;
+    color: #777;
+}
+.articles div{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 1.2rem;
+    border: .5px solid #eee;
+    font-size: var(--smaller-logo-font);
+}
+.articles p {
+    overflow-y: hidden;
+    height: 0;
+    transition: transform 3.2s ease-in-out;
+}
 /**********************************************/
 /*             btn-dw-container               */
 /**********************************************/ 
@@ -286,13 +357,11 @@ nav li .nav-link{
     padding-bottom: 30px;
     direction: ltr;
 }
-
 .btn-dw-container {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
-
 .btn-dw-container  .btn-phon{
     display: grid !important;
     grid-template-areas: 
@@ -316,7 +385,7 @@ nav li .nav-link{
 }
 .btn-dw-container  .btn-phon .app{
     grid-area: app;
-    font-size: .85rem;
+    font-size: 1rem;
     font-weight: 900;
 }
 .btn-dw-container  .btn-phon .play{
@@ -347,17 +416,18 @@ nav li .nav-link{
     color: #777777;
 }
 .talk .row  button{
-        min-width: 170px;
-        padding: 10px 15px;
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        border: 1px solid #ccc;
-        border-radius: 7px;
-        background: var(--main-color);
-        color:#fff;
-        justify-self: end;
+    min-width: 170px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: var(--main-color);
+    color:#fff;
+    justify-self: end;
 }
+
 /**********************************************/
 /*               footer                       */
 /**********************************************/ 
@@ -447,7 +517,7 @@ footer .row1 div:first-child ul li{
         transition-delay: 1.5s;
         transition: transform .2s , opacity 1.2s;
         transform-origin: top left;
-        background: #364646;
+        background: #198754;
     }
     .center_section {
         display: flex !important;
@@ -469,13 +539,13 @@ footer .row1 div:first-child ul li{
     }
     nav .collapse ul li {
     width: 100%;
-    border: 1px solid #333;
+    border:.5px solid #0f5132;
     padding: 20px;
     text-align: center;
     }
     nav .collapse ul li:hover{
     
-        background: #203a3a;
+        background: #147247;
     }
     nav .collapse ul li a {
     color: #fff !important;
@@ -484,10 +554,8 @@ footer .row1 div:first-child ul li{
      nav .collapse.navbar-collapse.menu-aside {
         opacity: 1;
         transition: transform .2s , opacity .2s;
-        transform: scale3d(1,1,1);
-        
+        transform: scale3d(1,1,1);       
     }
- 
 }
 /*************************************************/
 @media only screen and (max-width: 768px) { 
@@ -496,59 +564,59 @@ footer .row1 div:first-child ul li{
         --logo-font  : 2.2rem ;
         --smaller-logo-font  : 1.5rem
     }
-
     .under-body > section {
-        margin: 30px auto;
+        margin: 80px auto;
     }
     .food-dish .h-50 {
         margin-top: 30px;
     }
     .dish-about > .row > div > figure {
-        max-width: 250px;
-        max-height: 250px;
-        
+        width:100%;
+        height: 100%;     
     } 
     .dish-about > .row > div > img {
-        max-width: 270px;
-        max-height: 270px;
+        width:100%;
+        height: 100%;
     } 
-
     .About {
         margin-top: 20px !important;
     }
-
-    .About > * {
-        text-align: center;
+    .About  h3.summary {
+        width: 100%;
     }
     .About > .row > div button{
         margin: 5px auto 1rem;
     }
-
     .menus .row .menus-col:last-child {
         justify-self: start !important;
         margin-left: 0;
     }
-
+    .sandwich article {
+        padding: 30px 5px;
+    }
     .btn-dw-container {
         justify-content: center;
     }
-
     .phoes .row .phone-col img {
         max-width: 300px;
     }
-
     .talk .row div:last-child {
         text-align: start;
     }
-
 }
 /******************************************/
 @media only screen and (max-width: 572px) { 
 
-    .dish-about > .row > div button{
+    :root{
+        --logo-font  : 1.7rem ;
+        --smaller-logo-font  : 1.4rem
+    }
+    .dish-about > .row > div button , .sandwich button{
         font-size: calc(var(--main-font) - 3px);
     }
-
+    .sandwich img{
+        width: 80%;
+    }
     .phoes .row .phone-col img {
         width: 100%;
         max-width: 200px; 
@@ -564,7 +632,6 @@ footer .row1 div:first-child ul li{
         padding-bottom: 10px;
         border-bottom: 1px solid #ccc;
     }
-
 } 
 /***************************************************/
 /**                      animation                **/

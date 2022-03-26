@@ -20,7 +20,7 @@ window.onscroll = function(){
     }else{
         nav.style.background = "transparent";
     }
-    if(window.scrollY >= 500){
+    if(window.scrollY >= 2000){
         scrollBtn.classList.add("scroll-show");
     }else{
         scrollBtn.classList.remove("scroll-show");
@@ -84,4 +84,20 @@ for(let c = 0 ; c < iconContainer.length ; c++){
      }
  
  }
-///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//                         articles                    //
+/////////////////////////////////////////////////////////
+const  articleI = document.querySelectorAll("article > div");
+const  articleB = document.querySelectorAll("article > p");
+
+for(let s = 0 ; s < articleI.length ; s++){
+    articleI[s].addEventListener("click" , _=>{
+        articleB.forEach(e => {
+            e.title == articleI[s].className ? e.classList.toggle("fit-content") : "";   
+        });
+    })
+}
+
+
+
+
